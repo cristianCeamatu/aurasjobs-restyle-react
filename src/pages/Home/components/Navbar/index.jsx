@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -13,56 +12,68 @@ import {
   IconButton,
   Typography,
   Box,
+  Grid,
 } from '@material-ui/core';
 import {
-  ArrowBack,
-  Apps,
-  Home,
-  AssignmentInd,
-  ContactMail,
+  Menu,
+  TouchApp,
+  Info,
+  Work,
+  ContactPhone,
+  Call,
+  Email,
 } from '@material-ui/icons';
+import useStyles from './style';
 import avatar from './avatar.png';
-
-const useStyles = makeStyles((theme) => ({
-  menuSliderBox: {
-    margin: 0,
-    width: 250,
-    background: '#f9f9f9',
-    height: '100%',
-  },
-  avatar: {
-    display: 'block',
-    margin: '0.5rem auto',
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
-  menuItem: {
-    color: '#363636',
-  },
-}));
+import flagUK from './uk_flag_42x28.png';
+import flagRO from './ro_flag_42x28.png';
 
 const menuItems = [
   {
     key: 'menuItem1',
-    listIcon: <Home />,
-    listText: 'Home',
+    listIcon: <Info />,
+    listText: 'Despre',
   },
   {
     key: 'menuItem2',
-    listIcon: <AssignmentInd />,
-    listText: 'Resume',
+    listIcon: <Work />,
+    listText: 'Joburi',
   },
   {
     key: 'menuItem3',
-    listIcon: <Apps />,
-    listText: 'Portofolio',
+    listIcon: <TouchApp />,
+    listText: 'Aplica',
   },
   {
     key: 'menuItem4',
-    listIcon: <ContactMail />,
+    listIcon: <ContactPhone />,
     listText: 'Contact',
   },
 ];
+
+const contacts = [
+  {
+    key: 'contact1',
+    listIcon: <Call />,
+    listText: '+40725 085 231'
+  },
+  {
+    key: 'contact2',
+    listIcon: <Call />,
+    listText: '+40730 719 323'
+  },
+  {
+    key: 'contact3',
+    listIcon: <Call />,
+    listText: '+40728 683 604'
+  },
+  {
+    key: 'contact4',
+    listIcon: <Email />,
+    listText: 'office@aurasjobs.ro'
+  },
+];
+
 const Navbar = () => {
   const classes = useStyles();
 
@@ -85,10 +96,28 @@ const Navbar = () => {
       <List>
         {menuItems.map((item) => (
           <ListItem button key={item.key}>
-            <ListItemIcon className={classes.menuItem}>
+            <ListItemIcon className={classes.menuItemIcon}>
               {item.listIcon}
             </ListItemIcon>
-            <ListItemText className={classes.menuItem} primary={item.listText} />
+            <ListItemText primary={item.listText} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        <ListItem button alignItems="center">
+          <img className={classes.flag} src={flagUK} alt="UK flag" />
+          <ListItemText primary="English" />
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        {contacts.map((item) => (
+          <ListItem button key={item.key}>
+            <ListItemIcon className={classes.menuItemIcon}>
+              {item.listIcon}
+            </ListItemIcon>
+            <ListItemText primary={item.listText} />
           </ListItem>
         ))}
       </List>
@@ -98,13 +127,15 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="relative">
+        <AppBar title="Recruiting Agency" position="relative">
           <Toolbar>
             <IconButton onClick={sliderToggle('right', true)}>
-              <ArrowBack style={{ color: '#fafafa' }} />
+              <Menu style={{ color: '#fafafa' }} />
             </IconButton>
+            <ListItem button>
+              Recruiting Agency
+            </ListItem>
           </Toolbar>
-          <Typography primary="Recruiting Agency" />
           <MobilRightMenuSlider
             anchor="right"
             open={state.right}

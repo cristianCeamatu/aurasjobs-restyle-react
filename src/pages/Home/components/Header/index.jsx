@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import {
   Typography,
@@ -5,12 +6,11 @@ import {
   Box,
 } from '@material-ui/core';
 import Typed from 'react-typed';
-import Particles from 'react-particles-js'
+import Particles from 'react-particles-js';
 import { makeStyles } from '@material-ui/core/styles';
 import avatar from './avatar.png';
 import headerBackground from './coffee-apple.jpg';
 
-console.log(headerBackground);
 // CSS styles
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
@@ -67,14 +67,15 @@ const Header = () => {
               },
             },
             shape: {
-              type: 'circle',
+              type: 'star',
               stroke: {
-                width: 1,
+                width: 5,
+                height: 5,
                 color: 'red',
               },
             },
             size: {
-              value: 6,
+              value: 15,
               random: true,
               anim: {
                 enable: true,
@@ -90,7 +91,7 @@ const Header = () => {
                 enable: true,
                 speed: 2,
                 size_min: 0.1,
-                sync: true,
+                sync: false,
               },
             },
           },

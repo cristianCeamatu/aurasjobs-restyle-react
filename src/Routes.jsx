@@ -4,11 +4,10 @@ import {
   Switch, Route,
   Redirect,
 } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 
-const App = () => (
+const Routes = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -18,4 +17,4 @@ const App = () => (
   </Router>
 );
 
-export default App;
+export default Routes;
