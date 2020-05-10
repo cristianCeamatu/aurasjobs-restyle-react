@@ -1,84 +1,128 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import { BrowserRouter as Router, Link } from 'react-router-dom';
+import MobilRightMenuSlider from '@material-ui/core/Drawer';
 import {
-  ListItem,
-  ListItemText,
-  ListItemIcon,
   Divider,
+  ListItem,
   List,
+  ListItemIcon,
+  ListItemText,
   Box,
-  Avatar,
+  Grid,
 } from '@material-ui/core';
 import {
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
+  TouchApp,
+  Info,
+  Work,
+  ContactPhone,
+  Call,
+  Email,
 } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/core/styles';
-import avatar from './avatar.png';
-
-const useStyle = makeStyles((theme) => ({
-  menuSliderBox: {
-    margin: 0,
-    width: 250,
-    background: '#f9f9f9',
-    height: '100%',
-  },
-  avatar: {
-    display: 'block',
-    margin: '0.5rem auto',
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
-  menuItem: {
-    color: '#363636',
-  },
-}));
+import useStyles from './style';
+import logo from './img/logo.png';
+import flagUK from './img/uk_flag_42x28.png';
+// import flagRO from './img/ro_flag_42x28.png';
 
 const menuItems = [
   {
     key: 'menuItem1',
-    listIcon: <Home />,
-    listText: 'Home',
+    itemIcon: <Info />,
+    itemText: 'Despre',
+    itemLink: '/about',
   },
   {
     key: 'menuItem2',
-    listIcon: <AssignmentInd />,
-    listText: 'Resume',
+    itemIcon: <Work />,
+    itemText: 'Joburi',
+    itemLink: '/joburi',
   },
   {
     key: 'menuItem3',
-    listIcon: <Apps />,
-    listText: 'Portofolio',
+    itemIcon: <TouchApp />,
+    itemText: 'Aplica',
+    itemLink: '/aplica',
   },
   {
     key: 'menuItem4',
-    listIcon: <ContactMail />,
-    listText: 'Contact',
+    itemIcon: <ContactPhone />,
+    itemText: 'Contact',
+    itemLink: '/contact',
   },
 ];
 
-const MobileSideMenu = () => {
-  const classes = useStyle();
+const contacts = [
+  {
+    key: 'contact1',
+    itemIcon: <Call />,
+    itemText: '+40725 085 231',
+    itemLink: 'tel:0040725085231',
+  },
+  {
+    key: 'contact2',
+    itemIcon: <Call />,
+    itemText: '+40730 719 323',
+    itemLink: 'tel:0040730719323',
+  },
+  {
+    key: 'contact3',
+    itemIcon: <Call />,
+    itemText: '+40728 683 604',
+    itemLink: 'tel:0040728683604',
+  },
+  {
+    key: 'contact4',
+    itemIcon: <Email />,
+    itemText: 'office@aurasjobs.ro',
+    itemLink: 'mail:office@aurasjobs',
+  },
+];
+
+const MobileSideMenu = ({ slider, sliderToggle }) => {
+  const classes = useStyles();
 
   return (
-    <Box
-      className={classes.menuSliderBox}
-      component="div"
+    <MobilRightMenuSlider
+    anchor="right"
+    open={slider}
+    onClose={() => sliderToggle(false)}
     >
-      <Avatar className={classes.avatar} src={avatar} alt="Avatar" />
-      <Divider />
-      <List>
-        {menuItems.map((item) => (
-          <ListItem button key={item.key}>
-            <ListItemIcon className={classes.menuItem}>
-              {item.listIcon}
-            </ListItemIcon>
-            <ListItemText className={classes.menuItem} primary={item.listText} />
+      <Box
+        className={classes.menuSliderBox}
+        component="div"
+        onClick={() => sliderToggle(false)}
+      >
+        <Grid container justify="center">
+          <img className={`${classes.logo}`} src={logo} alt="logo" />
+        </Grid>
+        <Divider />
+        <List>
+          {menuItems.map((item) => (
+            <ListItem button key={item.key}>
+              <ListItemIcon className={classes.menuItemIcon}>
+                {item.itemIcon}
+              </ListItemIcon>
+              <ListItemText primary={item.itemText} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          <ListItem button alignItems="center">
+            <img className={classes.flag} src={flagUK} alt="UK flag" />
+            <ListItemText primary="English" className={classes.languageText} />
           </ListItem>
-        ))}
-      </List>
-    </Box>
+        </List>
+        <Divider />
+        <List>
+          {contacts.map((item) => (
+            <ListItem button key={item.key} className={classes.contactsMenu}>
+              {item.itemIcon}
+              <ListItemText primary={item.itemText} className={classes.contactsItemText} />
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+    </MobilRightMenuSlider>
   );
 };
 

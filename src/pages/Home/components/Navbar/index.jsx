@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import MobilRightMenuSlider from '@material-ui/core/Drawer';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
-  Avatar,
-  Divider,
   ListItem,
   List,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-  Typography,
   Box,
-  Grid,
+  Hidden,
+  ListItemText,
+  ListItemIcon,
 } from '@material-ui/core';
 import {
   Menu,
@@ -20,129 +16,81 @@ import {
   Info,
   Work,
   ContactPhone,
-  Call,
-  Email,
+  // Call,
+  // Email,
 } from '@material-ui/icons';
+import MobileSideMenu from './MobileSideMenu';
 import useStyles from './style';
-import avatar from './avatar.png';
-import flagUK from './uk_flag_42x28.png';
-import flagRO from './ro_flag_42x28.png';
+import logo from './img/logo.png';
+import flagUK from './img/uk_flag_42x28.png';
+// import flagRO from './img/ro_flag_42x28.png';
 
 const menuItems = [
   {
     key: 'menuItem1',
-    listIcon: <Info />,
-    listText: 'Despre',
+    itemIcon: <Info />,
+    itemText: 'Despre',
+    itemLink: '/about',
   },
   {
     key: 'menuItem2',
-    listIcon: <Work />,
-    listText: 'Joburi',
+    itemIcon: <Work />,
+    itemText: 'Joburi',
+    itemLink: '/joburi',
   },
   {
     key: 'menuItem3',
-    listIcon: <TouchApp />,
-    listText: 'Aplica',
+    itemIcon: <TouchApp />,
+    itemText: 'Aplica',
+    itemLink: '/aplica',
   },
   {
     key: 'menuItem4',
-    listIcon: <ContactPhone />,
-    listText: 'Contact',
-  },
-];
-
-const contacts = [
-  {
-    key: 'contact1',
-    listIcon: <Call />,
-    listText: '+40725 085 231'
-  },
-  {
-    key: 'contact2',
-    listIcon: <Call />,
-    listText: '+40730 719 323'
-  },
-  {
-    key: 'contact3',
-    listIcon: <Call />,
-    listText: '+40728 683 604'
-  },
-  {
-    key: 'contact4',
-    listIcon: <Email />,
-    listText: 'office@aurasjobs.ro'
+    itemIcon: <ContactPhone />,
+    itemText: 'Contact',
+    itemLink: '/contact',
   },
 ];
 
 const Navbar = () => {
   const classes = useStyles();
 
-  const [state, setState] = useState({
-    right: false,
-  });
-
-  const sliderToggle = (slider, open) => () => {
-    setState({ ...state, [slider]: open });
-  };
-
-  const sideMobileMenu = (slider) => (
-    <Box
-      className={classes.menuSliderBox}
-      component="div"
-      onClick={sliderToggle(slider, false)}
-    >
-      <Avatar className={classes.avatar} src={avatar} alt="Avatar" />
-      <Divider />
-      <List>
-        {menuItems.map((item) => (
-          <ListItem button key={item.key}>
-            <ListItemIcon className={classes.menuItemIcon}>
-              {item.listIcon}
-            </ListItemIcon>
-            <ListItemText primary={item.listText} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        <ListItem button alignItems="center">
-          <img className={classes.flag} src={flagUK} alt="UK flag" />
-          <ListItemText primary="English" />
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        {contacts.map((item) => (
-          <ListItem button key={item.key}>
-            <ListItemIcon className={classes.menuItemIcon}>
-              {item.listIcon}
-            </ListItemIcon>
-            <ListItemText primary={item.listText} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const [slider, setSlider] = useState(false);
 
   return (
     <>
       <Box component="nav">
-        <AppBar title="Recruiting Agency" position="relative">
-          <Toolbar>
-            <IconButton onClick={sliderToggle('right', true)}>
-              <Menu style={{ color: '#fafafa' }} />
-            </IconButton>
-            <ListItem button>
-              Recruiting Agency
-            </ListItem>
+        <AppBar position="relative" color="inherit">
+          <Toolbar className={classes.toolbar}>
+            <List>
+              <ListItem button component={Link} to="/">
+                <img className={classes.logo} src={logo} alt="logo" />
+              </ListItem>
+            </List>
+            <Hidden smDown>
+              <List className={classes.mdUpNavbar}>
+                {menuItems.map((item) => (
+                  <ListItem button key={item.key}>
+                    <ListItemIcon className={`${classes.mdUpMenuItemIcon} ${classes.menuItemIcon}`}>
+                      {item.itemIcon}
+                    </ListItemIcon>
+                    <ListItemText primary={item.itemText} />
+                  </ListItem>
+                ))}
+                <ListItem button alignItems="center">
+                  <img className={classes.flag} src={flagUK} alt="UK flag" />
+                </ListItem>
+              </List>
+            </Hidden>
+            <Hidden mdUp>
+              <List>
+                <ListItem button onClick={() => setSlider(true)}>
+                  <Menu className={classes.menuItemIcon} />
+                </ListItem>
+              </List>
+            </Hidden>
           </Toolbar>
-          <MobilRightMenuSlider
-            anchor="right"
-            open={state.right}
-            onClose={sliderToggle('right', false)}
-          >
-            {sideMobileMenu('right')}
-          </MobilRightMenuSlider>
+          <MobileSideMenu slider={slider} sliderToggle={() => setSlider(false)} />
         </AppBar>
       </Box>
     </>
