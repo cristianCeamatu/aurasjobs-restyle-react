@@ -1,6 +1,6 @@
 {
   "name": "react-aurasjobs",
-  "homepage": "https://cristianceamatu.github.io/aurasjobs-react",
+  "homepage": "https://cristianceamatu.github.io/aurasjobs-react/build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "gh-pages": "^2.2.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -24,6 +25,8 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
