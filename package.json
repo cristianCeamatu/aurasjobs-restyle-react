@@ -1,5 +1,6 @@
 {
   "name": "react-aurasjobs",
+  "homepage": "https://cristianceamatu.github.io/aurasjobs-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
