@@ -19,7 +19,7 @@ import {
   Email,
 } from '@material-ui/icons';
 import useStyles from './style';
-import logo from './img/logo.png';
+import logo from './img/logo2.png';
 import flagUK from './img/uk_flag_42x28.png';
 // import flagRO from './img/ro_flag_42x28.png';
 
@@ -92,7 +92,7 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
         onClick={() => sliderToggle(false)}
       >
         <Grid container justify="center">
-          <img className={`${classes.logo}`} src={logo} alt="logo" />
+          <img className={`${classes.logo} ${classes.sideMenuLogo}`} src={logo} alt="logo" />
         </Grid>
         <Divider />
         <List>
@@ -106,7 +106,7 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
               <ListItemIcon className={classes.menuItemIcon}>
                 {item.itemIcon}
               </ListItemIcon>
-              <ListItemText primary={item.itemText} />
+              {item.itemText}
             </ListItem>
           ))}
         </List>
@@ -122,8 +122,10 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
           {menuContactItems.map((item) => (
             <ListItem button key={item.key} className={classes.contactsMenu}>
               <a href={item.itemLink} className={classes.contactMenuAnchors}>
-                {item.itemIcon}
-                <ListItemText primary={item.itemText} className={classes.contactsItemText} />
+                <ListItemIcon className={classes.menuItemIcon}>
+                  {item.itemIcon}
+                </ListItemIcon>
+                {item.itemText}
               </a>
             </ListItem>
           ))}

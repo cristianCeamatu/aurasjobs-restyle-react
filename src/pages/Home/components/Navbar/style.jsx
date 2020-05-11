@@ -12,27 +12,26 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     fontWeight: 'bold',
   },
-  contactsMenu: {
-    color: theme.palette.text.secondary,
-  },
-  contactsItemText: {
-    marginLeft: theme.spacing(1),
-  },
   logo: {
-    width: theme.spacing(20),
-    height: theme.spacing(6),
+    width: theme.spacing(22),
+    height: theme.spacing(8),
+  },
+  sideMenuLogo: {
+    margin: theme.spacing(1),
   },
   flag: {
     width: theme.spacing(4),
   },
   languageText: {
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(1),
   },
   menuItemIcon: {
-    color: theme.palette.info.dark,
+    marginRight: -theme.spacing(3),
+    color: '#ff8700',
   },
   mdUpNavbar: {
     display: 'flex',
+    fontWeight: 'bold',
   },
   mdUpMenuItemIcon: {
     marginRight: -theme.spacing(3),
@@ -41,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     textDecoration: 'none',
-    color: theme.palette.info.main,
   },
 }));
 

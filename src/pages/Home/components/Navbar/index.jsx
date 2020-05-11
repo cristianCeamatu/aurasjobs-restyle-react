@@ -7,7 +7,7 @@ import {
   List,
   Box,
   Hidden,
-  ListItemText,
+  Avatar,
   ListItemIcon,
 } from '@material-ui/core';
 import {
@@ -21,7 +21,7 @@ import {
 } from '@material-ui/icons';
 import MobileSideMenu from './MobileSideMenu';
 import useStyles from './style';
-import logo from './img/logo.png';
+import logo from './img/logo2.png';
 import flagUK from './img/uk_flag_42x28.png';
 // import flagRO from './img/ro_flag_42x28.png';
 
@@ -74,7 +74,7 @@ const Navbar = () => {
                     <ListItemIcon className={`${classes.mdUpMenuItemIcon} ${classes.menuItemIcon}`}>
                       {item.itemIcon}
                     </ListItemIcon>
-                    <ListItemText primary={item.itemText} />
+                    {item.itemText}
                   </ListItem>
                 ))}
                 <ListItem button alignItems="center">
