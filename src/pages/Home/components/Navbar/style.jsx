@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
   mdUpMenuItemIcon: {
     marginRight: -theme.spacing(3),
   },
+  contactMenuAnchors: {
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    color: theme.palette.info.main,
+  },
 }));
 
 export default useStyles;

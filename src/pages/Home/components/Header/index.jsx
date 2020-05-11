@@ -2,108 +2,19 @@
 import React from 'react';
 import {
   Typography,
-  Avatar,
   Box,
+  Avatar,
 } from '@material-ui/core';
 import Typed from 'react-typed';
 import Particles from 'react-particles-js';
-import { makeStyles } from '@material-ui/core/styles';
-import avatar from './avatar.png';
-import headerBackground from './coffee-apple.jpg';
-
-// CSS styles
-const useStyles = makeStyles((theme) => ({
-  headerContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '200px 20px 300px',
-    height: theme.spacing(70),
-    width: '100%',
-    backgroundImage: `url(${headerBackground})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-  },
-  avatar: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
-    margin: theme.spacing(1),
-  },
-  headerTitle: {
-    textAlign: 'center',
-    fontSize: '24px',
-    color: 'tan',
-  },
-  headerSubtitle: {
-    textAlign: 'left',
-    fontSize: '28px',
-    color: '#fff',
-  },
-  particlesCanvas: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-}));
+import image1 from './img/particles/image3.png';
+import useStyles from './style';
 
 const Header = () => {
   const classes = useStyles();
-
   return (
     <Box className={classes.headerContainer}>
-      <Particles
-        canvasClassName={classes.particlesCanvas}
-        params={{
-          particles: {
-            number: {
-              value: 45,
-              density: {
-                enable: false,
-                value_area: 900,
-              },
-            },
-            shape: {
-              type: 'star',
-              stroke: {
-                width: 5,
-                height: 5,
-                color: 'red',
-              },
-            },
-            size: {
-              value: 15,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 6,
-                size_min: 0.1,
-                sync: true,
-              },
-            },
-            opacity: {
-              value: 1,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 2,
-                size_min: 0.1,
-                sync: false,
-              },
-            },
-          },
-        }}
-      />
-      <Avatar className={classes.avatar} src={avatar} alt="Avatar" />
-      <Typography className={classes.headerTitle} variant="h1">
-        <Typed
-          strings={['aurasjobs.ro']}
-          typeSpeed={60}
-        />
-      </Typography>
+      <Typography className={classes.headerTitle} variant="h1" />
       <Typography className={classes.headerSubtitle} variant="h3">
         <Typed
           strings={[

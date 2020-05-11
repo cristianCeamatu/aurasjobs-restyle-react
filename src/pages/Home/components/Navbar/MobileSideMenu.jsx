@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 import {
   Divider,
@@ -28,29 +28,29 @@ const menuItems = [
     key: 'menuItem1',
     itemIcon: <Info />,
     itemText: 'Despre',
-    itemLink: '/about',
+    itemLink: 'about',
   },
   {
     key: 'menuItem2',
     itemIcon: <Work />,
     itemText: 'Joburi',
-    itemLink: '/joburi',
+    itemLink: 'joburi',
   },
   {
     key: 'menuItem3',
     itemIcon: <TouchApp />,
     itemText: 'Aplica',
-    itemLink: '/aplica',
+    itemLink: 'aplica',
   },
   {
     key: 'menuItem4',
     itemIcon: <ContactPhone />,
     itemText: 'Contact',
-    itemLink: '/contact',
+    itemLink: 'contact',
   },
 ];
 
-const contacts = [
+const menuContactItems = [
   {
     key: 'contact1',
     itemIcon: <Call />,
@@ -73,7 +73,7 @@ const contacts = [
     key: 'contact4',
     itemIcon: <Email />,
     itemText: 'office@aurasjobs.ro',
-    itemLink: 'mail:office@aurasjobs',
+    itemLink: 'mailto:office@aurasjobs',
   },
 ];
 
@@ -82,9 +82,9 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
 
   return (
     <MobilRightMenuSlider
-    anchor="right"
-    open={slider}
-    onClose={() => sliderToggle(false)}
+      anchor="right"
+      open={slider}
+      onClose={() => sliderToggle(false)}
     >
       <Box
         className={classes.menuSliderBox}
@@ -97,7 +97,12 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
         <Divider />
         <List>
           {menuItems.map((item) => (
-            <ListItem button key={item.key}>
+            <ListItem
+              button
+              key={item.key}
+              component={Link}
+              to={item.itemLink}
+            >
               <ListItemIcon className={classes.menuItemIcon}>
                 {item.itemIcon}
               </ListItemIcon>
@@ -114,10 +119,12 @@ const MobileSideMenu = ({ slider, sliderToggle }) => {
         </List>
         <Divider />
         <List>
-          {contacts.map((item) => (
+          {menuContactItems.map((item) => (
             <ListItem button key={item.key} className={classes.contactsMenu}>
-              {item.itemIcon}
-              <ListItemText primary={item.itemText} className={classes.contactsItemText} />
+              <a href={item.itemLink} className={classes.contactMenuAnchors}>
+                {item.itemIcon}
+                <ListItemText primary={item.itemText} className={classes.contactsItemText} />
+              </a>
             </ListItem>
           ))}
         </List>

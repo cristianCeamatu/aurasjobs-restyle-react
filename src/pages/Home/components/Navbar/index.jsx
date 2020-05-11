@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="relative" color="inherit">
+        <AppBar position="static" color="inherit">
           <Toolbar className={classes.toolbar}>
             <List>
               <ListItem button component={Link} to="/">
