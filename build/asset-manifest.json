@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.708e51c4.chunk.css",
+    "main.js": "/static/js/main.6f6e94af.chunk.js",
+    "main.js.map": "/static/js/main.6f6e94af.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.73cb991c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.73cb991c.js.map",
+    "static/js/2.5c1b01f5.chunk.js": "/static/js/2.5c1b01f5.chunk.js",
+    "static/js/2.5c1b01f5.chunk.js.map": "/static/js/2.5c1b01f5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6a66f977ca677366bf8cc552d12d710d.js": "/precache-manifest.6a66f977ca677366bf8cc552d12d710d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.708e51c4.chunk.css.map": "/static/css/main.708e51c4.chunk.css.map",
+    "static/js/2.5c1b01f5.chunk.js.LICENSE.txt": "/static/js/2.5c1b01f5.chunk.js.LICENSE.txt",
+    "static/media/avatar.png": "/static/media/avatar.7c8e5f50.png",
+    "static/media/coffee-apple.jpg": "/static/media/coffee-apple.2dd213aa.jpg",
+    "static/media/logo.png": "/static/media/logo.13e6acea.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73cb991c.js",
+    "static/js/2.5c1b01f5.chunk.js",
+    "static/css/main.708e51c4.chunk.css",
+    "static/js/main.6f6e94af.chunk.js"
+  ]
+}
