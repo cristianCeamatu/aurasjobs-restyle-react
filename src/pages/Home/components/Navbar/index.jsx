@@ -7,50 +7,17 @@ import {
   List,
   Box,
   Hidden,
-  Avatar,
   ListItemIcon,
 } from '@material-ui/core';
 import {
   Menu,
-  TouchApp,
-  Info,
-  Work,
-  ContactPhone,
-  // Call,
-  // Email,
 } from '@material-ui/icons';
 import MobileSideMenu from './MobileSideMenu';
 import useStyles from './style';
-import logo from './img/logo2.png';
+import logo from './img/logonew.png';
 import flagUK from './img/uk_flag_42x28.png';
 // import flagRO from './img/ro_flag_42x28.png';
-
-const menuItems = [
-  {
-    key: 'menuItem1',
-    itemIcon: <Info />,
-    itemText: 'Despre',
-    itemLink: '/about',
-  },
-  {
-    key: 'menuItem2',
-    itemIcon: <Work />,
-    itemText: 'Joburi',
-    itemLink: '/joburi',
-  },
-  {
-    key: 'menuItem3',
-    itemIcon: <TouchApp />,
-    itemText: 'Aplica',
-    itemLink: '/aplica',
-  },
-  {
-    key: 'menuItem4',
-    itemIcon: <ContactPhone />,
-    itemText: 'Contact',
-    itemLink: '/contact',
-  },
-];
+import { menuItems } from './utils';
 
 const Navbar = () => {
   const classes = useStyles();
@@ -85,7 +52,7 @@ const Navbar = () => {
             <Hidden mdUp>
               <List>
                 <ListItem button onClick={() => setSlider(true)}>
-                  <Menu className={classes.menuItemIcon} />
+                  <Menu className={`${classes.menuItemIcon} ${classes.toggleMenuButton}`} />
                 </ListItem>
               </List>
             </Hidden>

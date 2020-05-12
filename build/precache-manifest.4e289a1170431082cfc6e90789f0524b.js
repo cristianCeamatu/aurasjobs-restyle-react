@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3adabc2de08aa98a8dd62ac68d6b6d9",
+    "revision": "e5fa1c4a0bc8b52eabc893a35174b475",
     "url": "/aurasjobs-react/build/index.html"
   },
   {
-    "revision": "89eba59c568b1841f0e9",
-    "url": "/aurasjobs-react/build/static/css/main.4d42abd2.chunk.css"
+    "revision": "8e399f67f514dcc29504",
+    "url": "/aurasjobs-react/build/static/css/main.3ecb28a0.chunk.css"
   },
   {
-    "revision": "5c2bb6f1f7c5a018bd0c",
-    "url": "/aurasjobs-react/build/static/js/2.79914cd6.chunk.js"
+    "revision": "3c8f3473abe344c0494d",
+    "url": "/aurasjobs-react/build/static/js/2.2c76c610.chunk.js"
   },
   {
     "revision": "cf89bcfdc86db2c261a743301fbeb514",
-    "url": "/aurasjobs-react/build/static/js/2.79914cd6.chunk.js.LICENSE.txt"
+    "url": "/aurasjobs-react/build/static/js/2.2c76c610.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "89eba59c568b1841f0e9",
-    "url": "/aurasjobs-react/build/static/js/main.c9158138.chunk.js"
+    "revision": "8e399f67f514dcc29504",
+    "url": "/aurasjobs-react/build/static/js/main.93becb82.chunk.js"
   },
   {
     "revision": "cf4c1b076cedb367b903",
     "url": "/aurasjobs-react/build/static/js/runtime-main.62e692a2.js"
   },
   {
-    "revision": "02ff41387dff6abd9fb582f431a2258a",
-    "url": "/aurasjobs-react/build/static/media/header11.02ff4138.jpg"
+    "revision": "cfd61ce1a168f82b2089c7c0223a2ebb",
+    "url": "/aurasjobs-react/build/static/media/header2.cfd61ce1.png"
   },
   {
     "revision": "7471bbe38a1359536ee3b62614e88e19",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aurasjobs-react/build/static/media/image6.3c634097.png"
   },
   {
-    "revision": "3c0add6afaf494541cb40d58ca0bec10",
-    "url": "/aurasjobs-react/build/static/media/logo2.3c0add6a.png"
+    "revision": "570456f19be8870735bd32636585a779",
+    "url": "/aurasjobs-react/build/static/media/logonew.570456f1.png"
   }
 ]);

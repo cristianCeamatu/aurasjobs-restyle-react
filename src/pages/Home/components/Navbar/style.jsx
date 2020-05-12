@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: -theme.spacing(3),
     color: '#ff8700',
   },
+  toggleMenuButton: {
+    marginRight: 0,
+  },
   mdUpNavbar: {
     display: 'flex',
     fontWeight: 'bold',
