@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/aurasjobs-react/build/static/css/main.3ecb28a0.chunk.css",
-    "main.js": "/aurasjobs-react/build/static/js/main.2916df82.chunk.js",
-    "main.js.map": "/aurasjobs-react/build/static/js/main.2916df82.chunk.js.map",
+    "main.css": "/aurasjobs-react/build/static/css/main.2907c1c9.chunk.css",
+    "main.js": "/aurasjobs-react/build/static/js/main.aa73b87f.chunk.js",
+    "main.js.map": "/aurasjobs-react/build/static/js/main.aa73b87f.chunk.js.map",
     "runtime-main.js": "/aurasjobs-react/build/static/js/runtime-main.62e692a2.js",
     "runtime-main.js.map": "/aurasjobs-react/build/static/js/runtime-main.62e692a2.js.map",
-    "static/js/2.062b5f88.chunk.js": "/aurasjobs-react/build/static/js/2.062b5f88.chunk.js",
-    "static/js/2.062b5f88.chunk.js.map": "/aurasjobs-react/build/static/js/2.062b5f88.chunk.js.map",
+    "static/js/2.35df2c39.chunk.js": "/aurasjobs-react/build/static/js/2.35df2c39.chunk.js",
+    "static/js/2.35df2c39.chunk.js.map": "/aurasjobs-react/build/static/js/2.35df2c39.chunk.js.map",
     "index.html": "/aurasjobs-react/build/index.html",
-    "precache-manifest.287419989e89ac122ab3d4196d65c4e4.js": "/aurasjobs-react/build/precache-manifest.287419989e89ac122ab3d4196d65c4e4.js",
+    "precache-manifest.546e686abb355c61166a8b3627f67ee3.js": "/aurasjobs-react/build/precache-manifest.546e686abb355c61166a8b3627f67ee3.js",
     "service-worker.js": "/aurasjobs-react/build/service-worker.js",
-    "static/css/main.3ecb28a0.chunk.css.map": "/aurasjobs-react/build/static/css/main.3ecb28a0.chunk.css.map",
-    "static/js/2.062b5f88.chunk.js.LICENSE.txt": "/aurasjobs-react/build/static/js/2.062b5f88.chunk.js.LICENSE.txt",
+    "static/css/main.2907c1c9.chunk.css.map": "/aurasjobs-react/build/static/css/main.2907c1c9.chunk.css.map",
+    "static/js/2.35df2c39.chunk.js.LICENSE.txt": "/aurasjobs-react/build/static/js/2.35df2c39.chunk.js.LICENSE.txt",
     "static/media/bar1.png": "/aurasjobs-react/build/static/media/bar1.3cad1893.png",
     "static/media/chef1.png": "/aurasjobs-react/build/static/media/chef1.f9027afd.png",
     "static/media/chef2.png": "/aurasjobs-react/build/static/media/chef2.27806ca5.png",
-    "static/media/chef3.png": "/aurasjobs-react/build/static/media/chef3.4c2487b1.png",
     "static/media/chef4.png": "/aurasjobs-react/build/static/media/chef4.1accb84f.png",
     "static/media/dish1.png": "/aurasjobs-react/build/static/media/dish1.c33bdab2.png",
     "static/media/header2.png": "/aurasjobs-react/build/static/media/header2.cfd61ce1.png",
@@ -33,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.62e692a2.js",
-    "static/js/2.062b5f88.chunk.js",
-    "static/css/main.3ecb28a0.chunk.css",
-    "static/js/main.2916df82.chunk.js"
+    "static/js/2.35df2c39.chunk.js",
+    "static/css/main.2907c1c9.chunk.css",
+    "static/js/main.aa73b87f.chunk.js"
   ]
 }

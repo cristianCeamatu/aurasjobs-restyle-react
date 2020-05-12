@@ -3,17 +3,17 @@ import React from 'react';
 import {
   Typography,
   Box,
+  Button,
 } from '@material-ui/core';
 import Typed from 'react-typed';
 import useStyles from './style';
-import ParticleComponent from './ParticleComponent'
+import ParticleComponent from './ParticleComponent';
 
 const Header = () => {
   const classes = useStyles();
   return (
     <Box className={classes.headerContainer}>
-      <ParticleComponent />
-      <Typography variant="h1">
+      <Typography variant="h1" style={{zIndex: 1, position: 'relative',}}>
         <Typed
           className={classes.headerSubtitle}
           strings={[
@@ -28,6 +28,7 @@ const Header = () => {
           loop
         />
       </Typography>
+      <ParticleComponent />
     </Box>
   );
 };

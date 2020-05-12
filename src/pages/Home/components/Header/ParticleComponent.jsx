@@ -12,7 +12,7 @@ const ParticleComponent = () => {
       params={{
         particles: {
           number: {
-            value: 18,
+            value: 8,
             density: {
               enable: true,
               value_area: 800,
@@ -29,7 +29,6 @@ const ParticleComponent = () => {
           },
           move: {
             speed: 6,
-            // out_mode: 'out',
           },
           shape: {
             type: [
@@ -42,11 +41,10 @@ const ParticleComponent = () => {
           },
           size: {
             value: 30,
-            random: false,
             anim: {
-              enable: false,
+              enable: true,
               speed: 15,
-              size_min: 10,
+              size_min: 27,
               sync: false,
             },
           },
@@ -60,7 +58,7 @@ const ParticleComponent = () => {
             },
             onclick: {
               enable: true,
-              mode: 'push',
+              mode: 'repulse',
             },
           },
           modes: {
@@ -69,7 +67,7 @@ const ParticleComponent = () => {
               duration: 0.4,
             },
             push: {
-              particles_nb: 4,
+              particles_nb: 0.5,
             },
           },
         },
