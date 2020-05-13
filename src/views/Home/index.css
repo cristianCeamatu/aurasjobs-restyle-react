@@ -1,0 +1,14 @@
+/** Theme colors 
+*   logo and icons: #ff8700 (orange)
+*   text: #363636;
+*   header image color: #f7c40d;
+*/
+body {
+  background: #f7c40d;
+}
+
+.mainContainer {
+  width: 100%;
+  max-width: 1368px;
+  margin: 0 auto;
+}

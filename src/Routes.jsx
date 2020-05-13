@@ -4,8 +4,8 @@ import {
   Switch, Route,
   Redirect,
 } from 'react-router-dom';
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+import Home from './views/Home';
+import Dashboard from './views/Dashboard';
 
 const Routes = () => (
   <Router>

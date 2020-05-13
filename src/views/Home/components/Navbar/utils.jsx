@@ -6,6 +6,7 @@ import {
   ContactPhone,
   Call,
   Email,
+  Facebook,
 } from '@material-ui/icons';
 
 export const menuItems = [
@@ -60,4 +61,11 @@ export const menuContactItems = [
     itemText: 'office@aurasjobs.ro',
     itemLink: 'mailto:office@aurasjobs',
   },
+  {
+    key: 'contact4',
+    itemIcon: <Facebook />,
+    itemText: 'facebook:aurasjobs.ro',
+    itemLink: 'https://www.facebook.com/aurasjobs.ro/',
+  },
+
 ];

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "71331f2442a2a81da0cac58b77a7bec1",
+    "revision": "e79a1f96ddfc8e21e3b1ede17491ab0a",
     "url": "/aurasjobs-react/build/index.html"
   },
   {
-    "revision": "55911567d3f3b6330f1c",
-    "url": "/aurasjobs-react/build/static/css/main.2907c1c9.chunk.css"
+    "revision": "e8ab28644a01af806ad9",
+    "url": "/aurasjobs-react/build/static/css/main.9808033f.chunk.css"
   },
   {
-    "revision": "48d5cdfe0ac6e191298f",
-    "url": "/aurasjobs-react/build/static/js/2.35df2c39.chunk.js"
+    "revision": "30ddabc190e3dc07bf3a",
+    "url": "/aurasjobs-react/build/static/js/2.2e15da73.chunk.js"
   },
   {
-    "revision": "cf89bcfdc86db2c261a743301fbeb514",
-    "url": "/aurasjobs-react/build/static/js/2.35df2c39.chunk.js.LICENSE.txt"
+    "revision": "8d63d9c682c0055a09a29ecf6a5a81fc",
+    "url": "/aurasjobs-react/build/static/js/2.2e15da73.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "55911567d3f3b6330f1c",
-    "url": "/aurasjobs-react/build/static/js/main.aa73b87f.chunk.js"
+    "revision": "e8ab28644a01af806ad9",
+    "url": "/aurasjobs-react/build/static/js/main.dc142e97.chunk.js"
   },
   {
     "revision": "cf4c1b076cedb367b903",

@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Typography,
   Box,
-  Button,
 } from '@material-ui/core';
 import Typed from 'react-typed';
 import useStyles from './style';

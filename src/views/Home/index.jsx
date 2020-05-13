@@ -3,15 +3,14 @@ import { CssBaseline } from '@material-ui/core';
 import './index.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import Jobs from './components/Jobs';
-import ParticleComponent from './components/Header/ParticleComponent';
+import UrgentJobs from './components/Jobs/UrgentJobs';
 
 const Home = () => (
-  <div>
+  <div className="mainContainer">
     <CssBaseline />
     <Navbar />
     <Header />
-    <Jobs />
+    <UrgentJobs />
   </div>
 );
 
