@@ -5,15 +5,12 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  CardMedia,
   Button,
   Typography,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Grow,
-  IconButton,
 } from '@material-ui/core';
 import {
   Today,
@@ -31,10 +28,13 @@ const useStyles = makeStyles((theme) => ({
     width: '90%',
     margin: '10px auto',
     padding: theme.spacing(1),
-    background: '#ff880010',
+    background: '#ffffff',
     [theme.breakpoints.up('sm')]: {
       maxWidth: 350,
     },
+  },
+  button: {
+    padding: '3px 6px',
   },
   listItemIcon: {
     color: '#ff8700',
@@ -45,23 +45,18 @@ const useStyles = makeStyles((theme) => ({
     color: '#ff8700',
     fontWeight: 'bold',
   },
-  polygon: {
-    background: '#ffffff',
+  cardActions: {
+    justifyContent: 'center',
+  },
+  bottomSkew: {
+    position: 'relative',
+    bottom: 0,
     width: '100%',
-    height: '100%',
-    transition: 'all 200ms ease-out',
-    '-webkit-clip-path': 'polygon(0 30%,30% 0, 100% 0,100% 70%,70% 100%,0 100%)',
-    '&:hover': {
-      '-webkit-clip-path': 'polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 0 100%)',
-    },
+    height: 0,
+    borderStyle: 'solid',
+    borderWidth: '0 0 40px 360px',
+    borderColor: 'transparent transparent #f7c40d transparent',
   },
-  cardContent: {
-    '&:hover': {
-      background: '#ffffff',
-      cursor: 'default',
-    },
-  },
-
 }));
 
 const UrgentJob = ({ job }) => {
@@ -70,51 +65,43 @@ const UrgentJob = ({ job }) => {
 
   return (
     <Card className={classes.root}>
-      <div className={classes.polygon}>
-        <CardActionArea>
-          {/* <CardMedia
-        component="img"
-        alt="Contemplative Reptile"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="Contemplative Reptile"
-      /> */}
-          <CardContent className={classes.cardContent}>
-            <Typography gutterBottom variant="h5" align="center" component="h2">
-              {fields.position}
-            </Typography>
-            <List>
-              <ListItem>
-                <ListItemIcon className={classes.listItemIcon}><Today /></ListItemIcon>
-                <ListItemText primary={`Embarkation: ${fields.date}`} />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon className={classes.listItemIcon}><DirectionsBoat /></ListItemIcon>
-                <ListItemText primary={`Ship: ${fields.ship}`} />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon className={classes.listItemIcon}><Business /></ListItemIcon>
-                <ListItemText primary={`Company: ${fields.company}`} />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon className={classes.listItemIcon}><FlightTakeoff /></ListItemIcon>
-                <ListItemText primary={`Travel cost: ${fields['flight ticket']}`} />
-              </ListItem>
-            </List>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" variant="outlined" color="primary" startIcon={<Phone />}>
-            Call
-          </Button>
-          <Button size="small" variant="outlined" color="secondary" startIcon={<TouchApp />} className={classes.applyButton}>
-            Apply
-          </Button>
-          <Button size="small" variant="outlined" color="primary" startIcon={<Facebook />}>
-            Share
-          </Button>
-        </CardActions>
-      </div>
+      <CardActionArea>
+        <CardContent>
+          <Typography component="h3" variant="h6" align="center" gutterBottom>
+            {fields.position}
+          </Typography>
+          <List>
+            <ListItem>
+              <ListItemIcon className={classes.listItemIcon}><Today /></ListItemIcon>
+              <ListItemText secondary={`Embarkation: ${fields.date}`} />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon className={classes.listItemIcon}><DirectionsBoat /></ListItemIcon>
+              <ListItemText secondary={`Ship: ${fields.ship}`} />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon className={classes.listItemIcon}><Business /></ListItemIcon>
+              <ListItemText secondary={`Company: ${fields.company}`} />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon className={classes.listItemIcon}><FlightTakeoff /></ListItemIcon>
+              <ListItemText secondary={`Travel cost: ${fields['flight ticket']}`} />
+            </ListItem>
+          </List>
+        </CardContent>
+      </CardActionArea>
+      <CardActions className={classes.cardActions}>
+        <Button className={classes.button} size="small" variant="outlined" color="primary" startIcon={<Phone />}>
+          Call
+        </Button>
+        <Button className={classes.button} size="small" variant="outlined" color="secondary" startIcon={<TouchApp />}>
+          Apply
+        </Button>
+        <Button className={classes.button} size="small" variant="outlined" color="primary" startIcon={<Facebook />}>
+          Share
+        </Button>
+      </CardActions>
+      <div className={classes.bottomSkew} />
     </Card>
   );
 };

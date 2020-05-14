@@ -8,7 +8,6 @@ import {
 } from '@material-ui/core';
 import { UrgentJobsProvider, UrgentJobsContext } from '../../context/UrgentJobsState';
 import UrgentJob from './UrgentJob';
-import UrgentJobPanel from './UrgentJobPanel';
 
 const Jobs = () => {
   const classes = useStyles();
@@ -17,13 +16,12 @@ const Jobs = () => {
   return (
     <UrgentJobsProvider>
       <div className={classes.topSkew} />
-      <Box component="div" className={classes.container} mt={5}>
+      <Box component="div" className={classes.container}>
         <Grow in timeout={{ enter: 2000 }}>
-          <Typography component="h3" variant="h3" align="center" gutterBottom>
+          <Typography component="h3" variant="h5" align="center" gutterBottom>
             Current openings
           </Typography>
         </Grow>
-        <UrgentJobPanel />
         <Grid container className={classes.urgentJobsContainer}>
           {urgentJobs.map((job) => <UrgentJob key={job.id} job={job} />)}
         </Grid>
@@ -36,6 +34,7 @@ const Jobs = () => {
 const useStyles = makeStyles((theme) => ({
   container: {
     padding: '30px 20px',
+    marginTop: '50px',
   },
   topSkew: {
     position: 'relative',
@@ -59,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: '30px',
   },
 }));
 

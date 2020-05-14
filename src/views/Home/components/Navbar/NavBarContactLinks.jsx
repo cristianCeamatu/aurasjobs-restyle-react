@@ -1,42 +1,17 @@
 import React from 'react';
 import {
-  TouchApp,
-  Info,
-  Work,
-  ContactPhone,
+  List,
+  ListItem,
+  ListItemIcon,
+} from '@material-ui/core';
+import {
   Call,
   Email,
   Facebook,
 } from '@material-ui/icons';
+import styled from 'styled-components';
 
-export const menuItems = [
-  {
-    key: 'menuItem1',
-    itemIcon: <Info />,
-    itemText: 'Despre',
-    itemLink: '/about',
-  },
-  {
-    key: 'menuItem2',
-    itemIcon: <Work />,
-    itemText: 'Joburi',
-    itemLink: '/joburi',
-  },
-  {
-    key: 'menuItem3',
-    itemIcon: <TouchApp />,
-    itemText: 'Aplica',
-    itemLink: '/aplica',
-  },
-  {
-    key: 'menuItem4',
-    itemIcon: <ContactPhone />,
-    itemText: 'Contact',
-    itemLink: '/contact',
-  },
-];
-
-export const menuContactItems = [
+const menuContactItems = [
   {
     key: 'contact1',
     itemIcon: <Call />,
@@ -62,10 +37,36 @@ export const menuContactItems = [
     itemLink: 'mailto:office@aurasjobs',
   },
   {
-    key: 'contact4',
+    key: 'contact5',
     itemIcon: <Facebook />,
     itemText: 'facebook:aurasjobs.ro',
     itemLink: 'https://www.facebook.com/aurasjobs.ro/',
   },
-
 ];
+
+const MenuItems = styled(List)`
+  font-size: 12px;
+`;
+
+const Icon = styled(ListItemIcon)`
+  margin-right: -15px;
+  color: #ff8700!important;
+`;
+
+const NavBarContacts = () => (
+  <MenuItems>
+    {menuContactItems.map((item) => (
+      <ListItem
+        button
+        key={item.key}
+        component="a"
+        href={item.itemLink}
+      >
+        <Icon>{item.itemIcon}</Icon>
+        {item.itemText}
+      </ListItem>
+    ))}
+  </MenuItems>
+);
+
+export default NavBarContacts;

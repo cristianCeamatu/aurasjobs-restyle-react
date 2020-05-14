@@ -4,10 +4,17 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #262626;
+}
+
 ul {
     list-style: none;
 }
 
 a {
-    color: #333;
+    color: #363636;
 }
