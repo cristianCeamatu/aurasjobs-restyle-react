@@ -2,7 +2,6 @@ import React from 'react';
 import {
   List,
   ListItem,
-  ListItemIcon,
 } from '@material-ui/core';
 import {
   Call,
@@ -48,15 +47,19 @@ const MenuItems = styled(List)`
   font-size: 12px;
 `;
 
-const Icon = styled(ListItemIcon)`
-  margin-right: -15px;
-  color: #ff8700!important;
+const MenuItem = styled(ListItem)`
+  line-height: 1;
+`;
+
+const Icon = styled.span`
+  margin-right: 15px;
+  color: #5D692Cff;
 `;
 
 const NavBarContacts = () => (
   <MenuItems>
     {menuContactItems.map((item) => (
-      <ListItem
+      <MenuItem
         button
         key={item.key}
         component="a"
@@ -64,7 +67,7 @@ const NavBarContacts = () => (
       >
         <Icon>{item.itemIcon}</Icon>
         {item.itemText}
-      </ListItem>
+      </MenuItem>
     ))}
   </MenuItems>
 );

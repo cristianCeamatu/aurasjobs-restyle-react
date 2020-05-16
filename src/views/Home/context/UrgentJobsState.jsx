@@ -1,12 +1,12 @@
 import React, { createContext, useReducer } from 'react';
-import Airtable from 'airtable';
+// import Airtable from 'airtable';
 import UrgentJobsReducer from './UrgentJobsReducer';
 
-Airtable.configure({
-  endpointUrl: 'https://api.airtable.com',
-  apiKey: 'keyuMEmAoanDg0hg8',
-});
-const base = Airtable.base('appJN1E2nRm2Lu6Pu');
+// Airtable.configure({
+//   endpointUrl: 'https://api.airtable.com',
+//   apiKey: 'keyuMEmAoanDg0hg8',
+// });
+// const base = Airtable.base('appJN1E2nRm2Lu6Pu');
 
 const initialState = {
   urgentJobs: [
@@ -15,7 +15,7 @@ const initialState = {
       fields: {
         position: 'Waiter',
         ship: 'MS Arkona',
-        'flight ticket': 'Reimbursed at the end of contract',
+        flightTicket: 'Reimbursed at the end of contract',
         requirements: [
           'Conversational English',
           'Travel money to the ship',
@@ -23,6 +23,9 @@ const initialState = {
         ],
         date: '2020-05-20',
         company: 'Anqor',
+        field: 'River Cruises',
+        salary: '€1000 - €1600',
+        location: 'Europe',
       },
       createdTime: '2020-05-13T08:17:31.000Z',
     },
@@ -31,13 +34,16 @@ const initialState = {
       fields: {
         position: 'Dishwasher',
         ship: 'MS Bellriva',
-        'flight ticket': 'Paid by the company',
+        flightTicket: 'Paid by the company',
         requirements: [
           'No experience required',
           'Conversational English',
         ],
         date: '2020-05-21',
         company: 'River Advice',
+        field: 'River Cruises',
+        salary: '€1000 - €1600',
+        location: 'Europe',
       },
       createdTime: '2020-05-13T08:17:31.000Z',
     },
@@ -46,13 +52,16 @@ const initialState = {
       fields: {
         position: 'Chef de Partie',
         ship: 'MS Dutch Melody',
-        'flight ticket': 'Reimbursed after 3 months',
+        flightTicket: 'Reimbursed after 3 months',
         requirements: [
           'Experience on the position',
           'Travel money to the ship',
         ],
         date: '2020-05-30',
         company: 'Cruisinc',
+        field: 'River Cruises',
+        salary: '€1000 - €1600',
+        location: 'Europe',
       },
       createdTime: '2020-05-13T08:17:31.000Z',
     },
@@ -83,6 +92,7 @@ const initialState = {
 export const UrgentJobsContext = createContext(initialState);
 
 export const UrgentJobsProvider = ({ children }) => {
+  // eslint-disable-next-line no-unused-vars
   const [state, dispatch] = useReducer(UrgentJobsReducer, initialState);
 
   return (

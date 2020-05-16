@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import {
   List,
   ListItem,
-  ListItemIcon,
   Hidden,
+  Divider,
 } from '@material-ui/core';
 import {
   TouchApp,
@@ -51,41 +51,53 @@ const MenuItems = styled(List)`
   }
 `;
 
+const MenuItem = styled(ListItem)`
+  line-height: 1;
+`;
+
+const LanguageItem = styled(MenuItem)`
+  margin-top: 8px!important;
+`;
 const Flag = styled.img`
   width: 30px;
 `;
 
-const Icon = styled(ListItemIcon)`
-  margin-right: -15px;
-  color: #ff8700!important;
+const Icon = styled.span`
+@media(max-width: 960px){
+  margin-right: 15px;
+}
+  color: #5D692Cff;
 `;
 
 const NavBarLinks = () => (
-  <MenuItems>
-    {links.map((link) => (
-      <ListItem
-        button
-        key={link.key}
-        component={Link}
-        to={link.link}
-      >
+  <>
+    <MenuItems>
+      {links.map((link) => (
+        <MenuItem
+          button
+          key={link.key}
+          component={Link}
+          to={link.link}
+        >
+          <Hidden mdUp>
+            <Icon>
+              {link.linkIcon}
+            </Icon>
+          </Hidden>
+          {link.linkText}
+        </MenuItem>
+      ))}
+      <Divider />
+      <LanguageItem button>
+        <Icon>
+          <Flag src={flagUK} alt="UK flag" />
+        </Icon>
         <Hidden mdUp>
-          <Icon>
-            {link.linkIcon}
-          </Icon>
+          English
         </Hidden>
-        {link.linkText}
-      </ListItem>
-    ))}
-    <ListItem button>
-      <Icon>
-        <Flag src={flagUK} alt="UK flag" />
-      </Icon>
-      <Hidden mdUp>
-        English
-      </Hidden>
-    </ListItem>
-  </MenuItems>
+      </LanguageItem>
+    </MenuItems>
+  </>
 );
 
 export default NavBarLinks;

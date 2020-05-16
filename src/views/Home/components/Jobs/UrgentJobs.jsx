@@ -1,65 +1,54 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  Grid,
-  Typography,
-  Grow,
-  Box,
-} from '@material-ui/core';
+import Typed from 'react-typed';
+import styled from 'styled-components';
 import { UrgentJobsProvider, UrgentJobsContext } from '../../context/UrgentJobsState';
-import UrgentJob from './UrgentJob';
+import Job from './Job';
 
-const Jobs = () => {
-  const classes = useStyles();
+const Wrapper = styled.section`
+  margin: 60px auto;
+`;
+
+const JobsWrapper = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 14px;
+  @media(min-width: 630px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media(min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+const SectionHeading = styled.h3`
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+`;
+
+const UrgentJobs = () => {
   const { urgentJobs } = useContext(UrgentJobsContext);
 
   return (
     <UrgentJobsProvider>
-      <div className={classes.topSkew} />
-      <Box component="div" className={classes.container}>
-        <Grow in timeout={{ enter: 2000 }}>
-          <Typography component="h3" variant="h5" align="center" gutterBottom>
-            Current openings
-          </Typography>
-        </Grow>
-        <Grid container className={classes.urgentJobsContainer}>
-          {urgentJobs.map((job) => <UrgentJob key={job.id} job={job} />)}
-        </Grid>
-      </Box>
-      <div className={classes.bottomSkew} />
+      <Wrapper>
+        <SectionHeading>
+          <Typed
+            strings={[
+              'Pozitii urgente',
+              'Incepere imediata',
+            ]}
+            typeSpeed={50}
+            backSpeed={60}
+            loop
+          />
+        </SectionHeading>
+        <JobsWrapper>
+          {urgentJobs.map((job) => <Job key={job.id} job={job} />)}
+        </JobsWrapper>
+      </Wrapper>
     </UrgentJobsProvider>
   );
 };
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: '30px 20px',
-    marginTop: '50px',
-  },
-  topSkew: {
-    position: 'relative',
-    top: '-2px',
-    width: '100%',
-    height: 0,
-    borderStyle: 'solid',
-    borderWidth: '40px 360px 0 0',
-    borderColor: '#f7c40d transparent transparent transparent',
-  },
-  bottomSkew: {
-    position: 'relative',
-    bottom: 0,
-    width: '100%',
-    height: 0,
-    borderStyle: 'solid',
-    borderWidth: '0 0 40px 360px',
-    borderColor: 'transparent transparent #f7c40d transparent',
-  },
-  urgentJobsContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: '30px',
-  },
-}));
-
-export default Jobs;
+export default UrgentJobs;

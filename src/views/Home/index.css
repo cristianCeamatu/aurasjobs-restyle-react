@@ -1,0 +1,38 @@
+/** Theme colors 
+*   logo and icons: #ff8700 (orange)
+*   text: #363636;
+*   header image color: #f7c40d;
+*/
+
+/* https://coolors.co/f7c40d-3d3938-5d692c-cbd69d-e49473 */
+/* HSL
+$color1: hsla(47%, 95%, 97%, 1);
+$color2: hsla(12%, 8%, 24%, 1);
+$color3: hsla(72%, 58%, 41%, 1);
+$color4: hsla(72%, 27%, 84%, 1);
+$color5: hsla(18%, 50%, 89%, 1);
+
+RGB
+$color1: rgba(247, 196, 13, 1);
+$color2: rgba(61, 57, 56, 1);
+$color3: rgba(93, 105, 44, 1);
+$color4: rgba(203, 214, 157, 1);
+$color5: rgba(228, 148, 115, 1);
+
+HEX
+$color1: #F7C40Dff;
+$color2: #3D3938ff;
+$color3: #5D692Cff;
+$color4: #CBD69Dff;
+$color5: #E49473ff;
+
+GRADIENT
+$gradient-top: linear-gradient(0deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-right: linear-gradient(90deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-bottom: linear-gradient(180deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-left: linear-gradient(270deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-top-right: linear-gradient(45deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-bottom-right: linear-gradient(135deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-top-left: linear-gradient(225deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-bottom-left: linear-gradient(315deg, #F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff);
+$gradient-radial: radial-gradient(#F7C40Dff, #3D3938ff, #5D692Cff, #CBD69Dff, #E49473ff); */
