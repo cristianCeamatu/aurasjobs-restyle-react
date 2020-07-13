@@ -9,9 +9,7 @@
 
 ## Built With
 
-- HTML,
-- CSS,
-- React Js
+- React Js - create-react-app
 
 To get a local copy up and running follow these simple example steps.
 
