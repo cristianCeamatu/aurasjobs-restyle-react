@@ -1,4 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Aurasjobs.ro restyle side project
+
+> The project is a possible future restyle of the [aurasjobs.ro](https://www.aurasjobs.ro/?lang=en).
+
+![screenshot](./app-screenshot-full.png)
+
+> I started the project improve my react skills.
+> The website is mobile responsive.
+
+## Built With
+
+- HTML,
+- CSS,
+- React Js
+
+To get a local copy up and running follow these simple example steps.
+
+### Setup
+
+Clone the project locally and run `npm install` in the root directory.
 
 ## Available Scripts
 
@@ -37,34 +56,21 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Cristian Viorel Ceamatu**
 
-### Code Splitting
+- Github: [@githubhandle](https://github.com/cristianCeamatu)
+- Twitter: [@twitterhandle](https://twitter.com/CeamatuV)
+- Linkedin: [linkedin](https://www.linkedin.com/in/ceamatu-cristian-viorel-7a5469136/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Give a ⭐️ if you like this project!
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## 📝 License
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
-# react-template
+This project is [MIT](lic.url) licensed.
